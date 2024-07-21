@@ -1,0 +1,38 @@
+$cGreen: #7e7e82;
+.block-repair-slider__slide--swiper-three {
+  .block-repair-slider__block {
+    border: none;
+    padding: 16px;
+    width: 260px;
+    height: 200px;
+    display: block;
+    button {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  .block-repair-slider__block--text-span {
+    .span-gray {
+      font-family: TT Lakes;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: left;
+      color: $cGreen;
+    }
+    .span-normal {
+      font-family: TT Lakes;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.20000000298023224px;
+      text-align: left;
+      display: block;
+      padding-bottom: 16px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .block-repair-slider__slide--swiper-three {
+    display: none;
+  }
+}

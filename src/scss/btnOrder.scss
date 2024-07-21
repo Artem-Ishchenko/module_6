@@ -1,0 +1,33 @@
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+.btnOrder-block {
+  background-color: $bgPink;
+  width: 120px;
+  height: 32px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 12px;
+  padding-left: 12px;
+  .btnOrder-block__text {
+    color: $bgWhite;
+    font-family: TT Lakes;
+    font-weight: 550;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    margin: auto;
+    text-transform: uppercase;
+  }
+  .btnOrder-block__decor {
+    width: 5px;
+    height: 5px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    margin: auto;
+  }
+}

@@ -1,0 +1,234 @@
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+$bgWhiteTwo: #f8f8f8;
+$bgBorderGreeneExt: #41f6d7;
+$cBlack: black;
+/*Мобильная версия*/
+/*Тело сайта*/
+.main-title {
+  display: flex;
+}
+
+/*Тело - декор для заголовка*/
+.main-title__border {
+  width: 4px;
+  min-height: 40px;
+  background-color: $bgBorderGreeneExt;
+  border-radius: 0 50px 50px 0;
+  margin-right: 12px;
+}
+
+/*Тело - текст заголовка*/
+.main-title__text {
+  margin-right: auto;
+}
+.main-title__text--h1 {
+  font-size: 28px;
+  line-height: 40px;
+  margin: 0;
+}
+
+/*Тело - слайдер*/
+.main-menu {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.main-menu__list {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin: 0;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  white-space: nowrap;
+}
+.main-menu__item {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+.main-menu__item--link:active {
+  text-decoration: none;
+}
+.main-menu__item--link:hover {
+  border-color: $bgBorderGreeneExt;
+}
+.main-menu__item--link {
+  text-decoration: none;
+  color: $cBlack;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  border: 2px solid $bgWhiteTwo;
+  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 10px;
+}
+.main-menu__item--link--active {
+  border-color: $bgBorderGreeneExt;
+}
+
+/*Тело - основной текст*/
+.main-text__text-and-next {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.main-text__text {
+  margin-bottom: 16px;
+}
+.main-text__item {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+/*Тело - Читать далее*/
+.main-text__next {
+  display: flex;
+  margin-bottom: 16px;
+  border: none;
+}
+.main-text__next--image {
+  margin-right: 8px;
+}
+.main-text__next--text {
+  margin: 0;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+}
+
+/*Тело - Картинка*/
+.main-text__image {
+  text-align: center;
+}
+.main-text__image--item {
+  height: 176px;
+  width: 320px;
+}
+
+/*Скрытые элементы мобильной версии*/
+@media (max-width: 767px) {
+  /*Текст скрытый*/
+  .main-text__item--text-width768 {
+    display: none;
+  }
+  .main-text__item--text-width768 {
+    margin-top: 34px;
+  }
+}
+
+/*Скрытое для пк*/
+@media (max-width: 1439px) {
+  .main-text__item--text-width1120 {
+    display: none;
+  }
+  .main-title__button--width-768 {
+    display: none;
+  }
+}
+/*Для планшета (ширина более - 768)*/
+@media (min-width: 768px) {
+  /*Тело - слайдер*/
+  .main-menu {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .main-menu__list {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  /*Тело - текст (планшет)*/
+  .main-text {
+    display: flex;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .main-text__text-and-next {
+    margin: 0;
+    margin-right: 48px;
+  }
+
+  /*Тело - картинка (планшет)*/
+  .main-text__image--item {
+    height: 208px;
+    width: 360px;
+    border-radius: 10px;
+  }
+}
+
+/*Для десктопа (ширина более - 1440)*/
+@media (min-width: 1440px) {
+  /*Тело -текст (добавление элементов с текстом)*/
+  .main-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+    margin-right: 32px;
+  }
+  .main-title__text {
+    margin-left: 28px;
+  }
+  .main-title__text--h1 {
+    margin-left: 0;
+  }
+
+  .main-title__image {
+    width: 40px;
+    height: 40px;
+    background-color: $bgPink;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-title__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-left: 32px;
+  }
+  .main-title__text--p {
+    line-height: 24px;
+    margin: 0;
+    margin-right: 8px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+  }
+
+  /*Тело - слайдер (выравнивание относительно заголовка сайта)*/
+  .main-menu {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .main-menu__list {
+    margin-left: 32px;
+    margin-right: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-menu__item {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /*Тело - картинка (размер и отступы)*/
+  .main-text__image--item {
+    width: 531px;
+    height: 307px;
+  }
+
+  /*Тело - основной текст (выравнивание)*/
+  .main-text {
+    margin-left: 34px;
+  }
+  .main-text__text-and-next {
+    margin-right: 36px;
+  }
+}

@@ -1,17 +1,98 @@
-$bgColor: #24292e;
-$text: #fff;
+//Импорты
+@import './header-cps.scss';
+@import './main-cps.scss';
+@import './side-bar.scss';
+@import './swiper_one.scss';
+@import './swiper_two.scss';
+@import './swiper_three.scss';
+@import './btnOrder.scss';
+@import './mainTable.scss';
+@import './mainCpsText.scss';
+@import './mainFooter.scss';
+@import './sideBarShadow.scss';
+@import './sideBarRight.scss';
+@import './sideBarRightTwo.scss';
+//ВСЕ Переменные//
+//Цвета(переменные)
+
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+$bgWhiteTwo: #f8f8f8;
+$bgWhiteThree: #eaeaea;
+$bgBorderGreeneExt: #41f6d7;
+$cBlack: black;
+$cBlackTwo: #1b1c21;
+$bgRed: red;
+$bgBorderGreen: #d9fff5;
+$cGreen: #7e7e82;
+$cGrayTwo: #b5b6bc;
+$cBlackThree: gray;
+
+//Шрифты(переменные)
+$fontRegular: 'TT Lakes Regular';
+$fontMedium: 'TT Lakes Medium';
+$fontDefault: 'sans-serif';
+$fontBold: 'TT Lakes ExtraBold';
+//Логика//
+//Шрифты(логика)
 
 @font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+    url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Medium.woff') format('woff'),
+    url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
-body {
-  padding: 1rem;
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-ExtraBold.eot');
+  src: local('TT Lakes ExtraBold'), local('TTLakes-ExtraBold'),
+    url('../fonts/TTLakes-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-ExtraBold.woff') format('woff'),
+    url('../fonts/TTLakes-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+button {
+  background-color: transparent;
+  font-family: 'TT Lakes', Times, serif;
+  font-size: 16px;
   margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'TT Lakes', Times, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: $bgWhiteTwo;
+}
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+  }
+}
+@media (min-width: 1900px) {
+  body,
+  .side-bar-right {
+    width: 1900px;
+    margin: 0 auto;
+  }
 }

@@ -1,0 +1,87 @@
+/*Головная часть*/
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+$bgBorderGreen: #d9fff5;
+
+.header-cps {
+  display: flex;
+  background-color: $bgWhite;
+  border-bottom: 1px solid $bgBorderGreen;
+  height: 87px;
+  margin-bottom: 24px;
+}
+.header-cps__button {
+  width: 40px;
+  height: 40px;
+  background-color: $bgPink;
+  border: none;
+  border-radius: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.header-cps__button > img {
+  vertical-align: middle;
+}
+.header-cps__button--main {
+  width: 98px;
+  height: 52px;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  background-color: $bgWhite;
+}
+.header-cps__border {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: 20px;
+  margin-left: auto;
+}
+.header-cps--last {
+  margin-left: 0;
+}
+
+/*Скрытые элементы мобильной версии*/
+@media (max-width: 767px) {
+  /*Головная часть (скрытая)*/
+  .header-cps--width-768 {
+    display: none;
+  }
+}
+
+/*Для десктопа (ширина более - 1120)*/
+@media (min-width: 1440px) {
+  /*Головная часть - скрытие хедера*/
+  .header-cps {
+    display: none;
+  }
+}
+/*Для планшета (ширина более - 768)*/
+@media (min-width: 768px) {
+  .header-cps__button--main {
+    margin-right: auto;
+  }
+  .header-cps__border {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .header-cps--width-768 {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+  .header-cps__button--first {
+    margin-left: 24px;
+    margin-right: 0;
+  }
+  .header-cps--last--width-768 {
+    margin-right: 24px;
+  }
+  .header-cps__border.header-cps--width-768 {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,125 @@
+$bgPink: #ff3e79;
+$bgRed: red;
+$bgBorderGreeneExt: #41f6d7;
+$bgWhite: #ffffff;
+$bgBorderGreen: #d9fff5;
+$bgWhiteThree: #eaeaea;
+$cGrayTwo: #b5b6bc;
+.side-bar-right {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: none;
+  h1 {
+    font-size: 24px;
+    margin: 24px;
+    margin-top: 27px;
+    margin-left: 32px;
+  }
+  .side-bar-right__decor {
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    background-color: $bgBorderGreeneExt;
+    border-radius: 3px;
+    top: 24px;
+    right: 439px;
+  }
+  .side-bar-right__shadow {
+    width: 100%;
+    height: 100vh;
+    background-color: $bgWhite;
+    opacity: 0.86;
+    position: absolute;
+  }
+  .side-bar-right__window {
+    width: 440px;
+    height: 100vh;
+    overflow: auto;
+    border-left: 1px solid $bgBorderGreen;
+    box-shadow: 16px 0px 52px 0px #0e185033;
+    background-color: $bgWhite;
+    z-index: 99;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .side-bar-right__button {
+    background-color: $bgPink;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 24px;
+    right: 481px;
+  }
+  .side-bar-right__form {
+    margin-left: 32px;
+    margin-right: 32px;
+    button {
+      width: 132px;
+      margin-left: auto;
+      margin-top: 20px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      height: 48px;
+      box-sizing: border-box;
+      border: 1px solid $bgWhiteThree;
+      border-radius: 3px;
+      font-size: 16px;
+      padding: 12px 0px 12px 16px;
+      margin-bottom: 16px;
+    }
+    textarea {
+      height: 118px;
+      resize: none;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-family: TT Lakes;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.20000000298023224px;
+      text-align: left;
+      color: $cGrayTwo;
+    }
+  }
+  .side-bar-right__text {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    span {
+      color: $bgRed;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .side-bar-right {
+    h1 {
+      margin-left: 16px;
+    }
+    .side-bar-right__decor {
+      top: 85px;
+      right: 319px;
+    }
+    .side-bar-right__window {
+      width: 320px;
+    }
+    .side-bar-right__button {
+      position: static;
+      margin-top: 24px;
+      margin-left: 16px;
+    }
+    .side-bar-right__form {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$bgWhite: #ffffff;
+.main-side-bar {
+  display: flex;
+  background-color: $bgWhite;
+  .side-bar-shadow {
+    width: 100%;
+    height: 100vh;
+    background-color: $bgWhite;
+    opacity: 0.86;
+    position: absolute;
+    z-index: 98;
+    display: none;
+    top: 0;
+  }
+}

@@ -1,0 +1,210 @@
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+$bgBorderGreeneExt: #41f6d7;
+$cBlackTwo: #1b1c21;
+$cGreen: #7e7e82;
+.side-bar {
+  overflow: auto;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 320px;
+  box-shadow: 16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05;
+  background-color: $bgWhite;
+  top: 0;
+  z-index: 99;
+}
+
+/* Головная часть Сайд-бара */
+.header-side-bar {
+  min-height: 86px;
+  display: flex;
+}
+.header-side-bar .header-side-bar__button {
+  width: 40px;
+  height: 40px;
+  background-color: $bgPink;
+  border: none;
+  border-radius: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 24px;
+  margin-right: 17px;
+}
+
+.header-side-bar__button > img {
+  vertical-align: middle;
+}
+
+.header-side-bar .header-side-bar__button--main {
+  width: 98px;
+  height: 52px;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.header-side-bar .header-side-bar__button--right {
+  margin-right: 24px;
+  margin-left: auto;
+}
+
+/* Список Сайд-бара */
+
+.main-side-bar__list {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.main-side-bar__item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.main-side-bar__border {
+  order: -1;
+  width: 4px;
+  min-height: 40px;
+  background-color: $bgWhite;
+  border-radius: 0 50px 50px 0;
+}
+.main-side-bar__button {
+  text-align: start;
+  margin-left: 20px;
+  font-weight: 500;
+  border: none;
+  color: $cBlackTwo;
+  transition-duration: 0.5s;
+}
+.main-side-bar__button:hover,
+.main-side-bar__button:active,
+.main-side-bar__button:focus {
+  color: $cGreen;
+}
+
+.main-side-bar__button:hover + .main-side-bar__border,
+.main-side-bar__button:active + .main-side-bar__border,
+.main-side-bar__button:focus + .main-side-bar__border {
+  background-color: $bgBorderGreeneExt;
+  transition-duration: 0.2s;
+  transform: rotateX(180deg);
+}
+
+.main-side-bar__button--active {
+  color: $cGreen;
+  + .main-side-bar__border {
+    background-color: $bgBorderGreeneExt;
+  }
+}
+
+/* footer */
+/* Нижнии кнопки Сайд-бар */
+
+.footer-side-bar {
+  margin-top: auto;
+  padding-bottom: 32px;
+}
+.footer-side-bar__button-all {
+  margin-right: auto;
+  margin-left: 24px;
+  display: flex;
+  margin-bottom: 16px;
+}
+.footer-side-bar__button {
+  width: 40px;
+  height: 40px;
+  background-color: $bgPink;
+  border: none;
+  border-radius: 100%;
+  margin-right: 16px;
+}
+.footer-side-bar__button > img {
+  vertical-align: middle;
+}
+
+/* Ссылки на сайт Сайд-бар */
+.footer-side-bar__mail {
+  display: block;
+  text-decoration: none;
+  color: $cBlackTwo;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin-left: 24px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.footer-side-bar__number {
+  display: block;
+  text-decoration: none;
+  color: $cBlackTwo;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+  margin-left: 24px;
+}
+/* Языки Сайд-бар */
+
+.footer-side-bar__list-lang {
+  /* display: flex; */
+  padding: 0;
+  margin-bottom: 0px;
+  margin-left: 24px;
+  margin-right: auto;
+  margin-top: 8px;
+}
+.footer-side-bar__item-lang {
+  list-style-type: none;
+  margin-right: 7px;
+}
+.footer-side-bar__form_radio_btn {
+  display: inline-block;
+  margin-right: 10px;
+}
+.footer-side-bar__form_radio_btn label {
+  font-weight: 500;
+}
+.footer-side-bar__form_radio_btn input[type='radio'] {
+  display: none;
+}
+.footer-side-bar__form_radio_btn input[type='radio']:checked + label {
+  color: $cGreen;
+  transition-duration: 0.5s;
+}
+// для тени
+.lock {
+  overflow: hidden;
+}
+
+@media (max-width: 360px) {
+  .header-side-bar .header-side-bar__button--close-btn {
+    margin-left: 16px;
+  }
+}
+
+@media (min-height: 1024px) {
+  .footer-side-bar {
+    position: absolute;
+    top: 804px;
+  }
+}
+@media (max-width: 360px) {
+  .side-bar {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .side-bar {
+    position: static;
+    display: flex;
+    box-shadow: none;
+  }
+  .header-side-bar__button--close-btn {
+    display: none;
+  }
+  .header-side-bar__button--main {
+    margin-left: 22px;
+  }
+}

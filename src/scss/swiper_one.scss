@@ -1,0 +1,247 @@
+$bgBorderGreeneExt: #41f6d7;
+$cBlackThree: gray;
+$bgPink: #ff3e79;
+$bgWhite: #ffffff;
+$bgBorderGreen: #d9fff5;
+$bgWhiteThree: #eaeaea;
+$bgWhiteTwo: #f8f8f8;
+.block-repair {
+  padding-top: 50px;
+}
+/* Хедер */
+.block-repair__header {
+  height: 80px;
+  box-sizing: border-box;
+  padding: 16px;
+  background: linear-gradient(to right, transparent, $bgWhite);
+  border-top: 1px solid $bgBorderGreen;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+.block-repair__header-text {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+/* Для мобилки */
+/* Слайдер - стилизация */
+.block-repair-slider__wrapper {
+  margin-left: 16px;
+}
+
+.block-repair-slider__block {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border: 1px solid $bgWhiteThree;
+  background: $bgWhite;
+  border-radius: 10px;
+  width: 240px;
+  height: 72px;
+  box-sizing: border-box;
+}
+.block-repair-slider__block > img {
+  margin: auto auto auto 16px;
+}
+.block-repair-slider__slide {
+  width: auto;
+  margin-right: 16px;
+}
+.block-repair-slider {
+  overflow: hidden;
+}
+/* Добавляет прозрачности справа свайпера
+и убираю его при достижении определенной ширины выше*/
+
+.wrapper-transparent {
+  width: 24px;
+  height: 72px;
+  background-image: linear-gradient(to right, transparent, $bgWhiteTwo);
+  position: absolute;
+  top: 96px;
+  right: 0;
+  z-index: 10;
+}
+
+/* Кнопка */
+.block-repair-slider__button {
+  margin: auto 16px auto auto;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $bgPink;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+}
+.block-repair-slider__button:hover {
+  background-color: $bgPink;
+  transition: background 0.5s ease;
+}
+/* Стилизация кнопки на CSS */
+.button__part-one-line {
+  width: 7px;
+  height: 2px;
+  background: $bgPink;
+  border-radius: 2px;
+  position: relative;
+  rotate: 45deg;
+  top: -1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button__part-two-line {
+  width: 7px;
+  height: 2px;
+  background: $bgPink;
+  border-radius: 2px;
+  position: relative;
+  rotate: -45deg;
+  top: 1px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Булеты в слайдере */
+.swiper-pagination-bullets {
+  position: static;
+  margin-top: 16px;
+}
+.swiper-pagination-bullet {
+  background-color: $cBlackThree;
+  width: 12px;
+  height: 12px;
+}
+
+.block-repair__button-next {
+  width: 134px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: TT Lakes;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-left: 24px;
+}
+.block-repair__button-next:hover {
+  color: $cBlackThree;
+  transition: color 0.5s ease;
+}
+.block-repair__arrow {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.block-repair__arrow-part-one {
+  width: 4px;
+  height: 4px;
+  border: 2px solid $bgBorderGreeneExt;
+  border-radius: 20%;
+  border-width: 0 2px 2px 0;
+  rotate: 45deg;
+}
+.block-repair__arrow-part-two {
+  width: 4px;
+  height: 4px;
+  border: 2px solid $bgBorderGreeneExt;
+  border-radius: 20%;
+  border-width: 0 2px 2px 0;
+  rotate: 45deg;
+}
+/* вспомогательный класс */
+.disable {
+  display: none;
+}
+
+/* Отключаю булеты вручную, потому что
+сами они почему-то выключаются через раз;
+Отключаю декоративную прозрачность в конце у свайпера */
+@media (min-width: 768px) {
+  .block-repair-slider .swiper-pagination-bullet {
+    display: none;
+  }
+  .wrapper-transparent {
+    display: none;
+  }
+  /* меняю хедер при достижении определенной высоты */
+  .block-repair .block-repair__header {
+    height: 56px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+  }
+}
+
+/* меняю стили отступов и т.п.
+в зависимости от разрешения */
+@media (min-width: 768px) {
+  .block-repair-slider {
+    margin: 24px;
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+  .block-repair-slider__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    gap: 24px;
+    margin: 0;
+  }
+  .block-repair-slider__slide {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .block-repair-slider__block {
+    width: 224px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .block-repair .block-repair__header {
+    padding-left: 32px;
+  }
+  .block-repair-slider {
+    margin-right: 32px;
+    margin-left: 32px;
+    padding-bottom: 0;
+  }
+  .block-repair-slider__block {
+    width: 240px;
+    margin: 0;
+  }
+  .block-repair-slider__wrapper {
+    row-gap: 16px;
+    column-gap: 32px;
+  }
+}
+
+/* Кнопка ЕЩЕ */
+@media (max-width: 767px) {
+  .block-repair .block-repair__button-next {
+    display: none;
+  }
+}
+@media (min-width: 1120px) {
+  .block-repair .block-repair__button-next {
+    margin-left: 32px;
+  }
+}
+@media (min-width: 1984px) {
+  .block-repair .block-repair__button-next {
+    display: none;
+  }
+}

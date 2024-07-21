@@ -1,0 +1,51 @@
+$cBlack: black;
+$bgRed: red;
+
+.main-cps__text {
+  padding: 16px;
+  a {
+    text-decoration: none;
+    color: $cBlack;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+  }
+  a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: solid $bgRed;
+    border-width: 0 0px 2px 2px;
+    border-radius: 2px;
+    transform: rotate(-135deg);
+    margin-left: 8px;
+  }
+  p {
+    padding-bottom: 16px;
+    max-width: 421px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .main-cps__text {
+    padding: 24px;
+    p {
+      padding-bottom: 16px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .main-cps__text {
+    padding: 32px;
+    p {
+      padding-bottom: 16px;
+    }
+  }
+}
